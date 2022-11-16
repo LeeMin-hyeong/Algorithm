@@ -79,15 +79,17 @@ struct Node *tree(int i, int j, int r[][5]){
 
 //Pre order
 void print_tree(struct Node *root){
-    cout<<root->key<<" ";
+    cout<<"(";
+    cout<<root->key;
     if(root->left!=NULL)
         print_tree(root->left);
     if(root->right!=NULL)
         print_tree(root->right);
+    cout<<")";
 }
 
 int main(){
-    float p[5]={0, 3.0/8, 3.0/8, 1.0/8, 1.0/8};
+    float p[5]={0, 5.0/16, 3.0/16, 6.0/16, 2.0/16};
     int r[6][5];
     float *minavg;
     optsearchtree(5, p, minavg, r);
